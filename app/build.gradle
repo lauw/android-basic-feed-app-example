@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.muller.instagramfeed"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.0.0'
+
+    //retrofit -- http://square.github.io/retrofit/
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+
+    //https://developer.android.com/training/material/lists-cards.html
+    compile 'com.android.support:cardview-v7:21.0.3'
+    compile 'com.android.support:recyclerview-v7:21.0.3'
+
+    //picasso -- http://square.github.io/picasso/
+    compile 'com.squareup.picasso:picasso:2.5.0'
+
+    //butterknife -- http://jakewharton.github.io/butterknife/
+    compile 'com.jakewharton:butterknife:6.0.0'
+
+    //otto -- http://square.github.io/otto/
+    compile 'com.squareup:otto:1.3.6'
+
+    //dagger -- http://square.github.io/dagger/
+    provided 'com.squareup.dagger:dagger-compiler:1.2.2'
+    compile 'com.squareup.dagger:dagger:1.2.2'
+
+    //espresso -- https://code.google.com/p/android-test-kit/wiki/EspressoSetupInstructions
+    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
+    androidTestCompile ('com.android.support.test.espresso:espresso-contrib:2.0') {
+        exclude module: 'support-annotations'
+    }
+}

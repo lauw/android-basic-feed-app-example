@@ -1,0 +1,9 @@
+<resources>
+	<string name="app_name">Travelgram</string>
+	<string name="hello_world">Hello world!</string>
+	<string name="action_refresh">Refresh</string>
+	<string name="action_data">Data</string>
+
+	<string name="data_count">Nr of elements in data array:</string>
+	<string name="like_count">Nr of likes:</string>
+</resources>

@@ -1,0 +1,4 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="@dimen/media_image_caption_height" android:orientation="horizontal">
+	<ImageView android:id="@+id/media_adapter_item_image" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/placeholder" android:layout_weight="1" android:scaleType="centerCrop" />
+	<TextView android:id="@+id/media_adapter_item_image_caption" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:textColor="@color/black" android:textSize="14sp" android:ellipsize="end" android:maxLines="3" android:gravity="center" android:paddingRight="@dimen/media_image_caption_text_padding" android:paddingLeft="@dimen/media_image_caption_text_padding"/>
+</LinearLayout>
